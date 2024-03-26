@@ -4,22 +4,23 @@
 import java.util.Scanner;
 public class Main {
   public static void main(String[] args) {
-   Scanner sc = new Scanner(System.in);
+    System.out.println("Nota entre 0 e 10");
+    Scanner sc= new Scanner(System.in);
     int nota;
-      System.out.println("Digite a nota obtida: ");
-    nota = sc.nextInt();
-    if (nota < 0 && nota > 10);
-    System.out.println("Nota inválida, a nota deve ser entre 0 e 10");
-    System.out.println("Digite uma nota válida: ");
-    nota = sc.nextInt();
-    if (nota >= 0 && nota <= 10);
-    System.out.println("Nota válida");
+    do {      
+      nota = sc.nextInt();
+      if (nota < 0 || nota > 10)
+        System.out.println("Nota inválida, digite novamente");
+    } while (nota < 0 || nota > 10);
+    if (nota >=0 || nota <= 10)
+    System.out.println("Nota obtida: "+nota);
+
+    sc.close();
     
-    
-  }
 
   // @Test
   // void addition() {
   //     assertEquals(2, 1 + 1);
   // }
+  }
 }
